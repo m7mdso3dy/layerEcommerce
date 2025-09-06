@@ -34,6 +34,29 @@
     "Permission:Books.Delete": "Deleting the books",
     "Menu:Home": "Home",
     "LongWelcomeMessage": "Welcome to the application. This is a startup project based on the ABP framework. For more information visit",
-    "Welcome": "Welcome"
+    "Welcome": "Welcome",
+
+    //Categories Permissions
+    "Permission:Categories": "Categories Management",
+    "Permission:Categories.Create": "Creating new Category",
+    "Permission:Categories.Edit": "Editing the Category",
+    "Permission:Categories.Delete": "Deleting the Category",
+
+    //Products Permissions
+    "Permission:Products": "Products Management",
+    "Permission:Products.Create": "Creating new Product",
+    "Permission:Products.Edit": "Editing the Product",
+    "Permission:Products.Delete": "Deleting the Product",
+
+    //Product Form
+    "ProductNameRequired": "Product name cannot be empty",
+    "ProductNameLength": "Product name must be between 3 and 256 characters",
+    "ProductNameArRequired": "Arabic product name cannot be empty",
+    "ProductSkuRequired": "Product SKU is required",
+    "ProductSkuLength": "SKU must not exceed 64 characters",
+    "ProductCategoryRequired": "Product category is required",
+    "ProductPriceNegative": "Product price should not be negative",
+    "ProductDescriptionLength": "Description cannot exceed 2000 characters",
+    "ProductShortDescriptionLength": "Short description cannot exceed 512 characters"
   }
 }

@@ -15,8 +15,18 @@ public class layerEcommercePermissionDefinitionProvider : PermissionDefinitionPr
         booksPermission.AddChild(layerEcommercePermissions.Books.Create, L("Permission:Books.Create"));
         booksPermission.AddChild(layerEcommercePermissions.Books.Edit, L("Permission:Books.Edit"));
         booksPermission.AddChild(layerEcommercePermissions.Books.Delete, L("Permission:Books.Delete"));
-        //Define your own permissions here. Example:
-        //myGroup.AddPermission(layerEcommercePermissions.MyPermission1, L("Permission:MyPermission1"));
+
+        //Categories
+        var categoriesPermission = myGroup.AddPermission(layerEcommercePermissions.Categories.Default, L("Permission:Categories"));
+        categoriesPermission.AddChild(layerEcommercePermissions.Categories.Create, L("Permission:Categories.Create"));
+        categoriesPermission.AddChild(layerEcommercePermissions.Categories.Edit, L("Permission:Categories.Edit"));
+        categoriesPermission.AddChild(layerEcommercePermissions.Categories.Delete, L("Permission:Categories.Delete"));
+
+        //Products
+        var productsPermission = myGroup.AddPermission(layerEcommercePermissions.Products.Default, L("Permission:Products"));
+        productsPermission.AddChild(layerEcommercePermissions.Products.Create, L("Permission:Products.Create"));
+        productsPermission.AddChild(layerEcommercePermissions.Products.Edit, L("Permission:Products.Edit"));
+        productsPermission.AddChild(layerEcommercePermissions.Products.Delete, L("Permission:Products.Delete"));
     }
 
     private static LocalizableString L(string name)

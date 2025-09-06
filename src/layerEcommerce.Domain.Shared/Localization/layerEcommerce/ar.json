@@ -37,6 +37,30 @@
     "Unspecified": "نظام",
     "SeeAllUsers": "رؤية كافة المستخدمين",
     "TakePhoto": "تصوير",
-    "ChoosePhoto": "اختر صورة"
+    "ChoosePhoto": "اختر صورة",
+
+    //Categories Permissions
+    "Permission:Categories": "إدارة التصنيفات",
+    "Permission:Categories.Create": "إضافة تصنيف جديد",
+    "Permission:Categories.Edit": "تعديل التصنيف",
+    "Permission:Categories.Delete": "حذف التصنيف",
+
+    //Products Permissions
+    "Permission:Products": "إدارة المنتجات",
+    "Permission:Products.Create": "إضافة منتج جديد",
+    "Permission:Products.Edit": "تعديل المنتج",
+    "Permission:Products.Delete": "حذف المنتج",
+
+    //Product Form
+    "ProductNameRequired": "اسم المنتج لا يمكن أن يكون فارغًا",
+    "ProductNameLength": "يجب أن يكون اسم المنتج بين 3 و 256 حرفًا",
+    "ProductNameArRequired": "اسم المنتج باللغة العربية لا يمكن أن يكون فارغًا",
+    "ProductSkuRequired": "كود المنتج مطلوب",
+    "ProductSkuLength": "كود المنتج يجب ألا يتجاوز 64 حرفًا",
+    "ProductCategoryRequired": "يجب تحديد فئة المنتج",
+    "ProductPriceNegative": "سعر المنتج لا يجب أن يكون سالبًا",
+    "ProductDescriptionLength": "الوصف لا يمكن أن يتجاوز 2000 حرف",
+    "ProductShortDescriptionLength": "الوصف القصير لا يمكن أن يتجاوز 512 حرف"
+
   }
 }
