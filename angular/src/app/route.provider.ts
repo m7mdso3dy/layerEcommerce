@@ -24,5 +24,12 @@ function configureRoutes() {
         layout: eLayoutType.application,
         requiredPolicy: 'layerEcommerce.Books',
       },
+      {
+        path: '/products',
+        name: 'products',
+        iconClass: 'fas fa-list',
+        layout: eLayoutType.application,
+        requiredPolicy: 'layerEcommerce.Products',
+      },
   ]);
 }

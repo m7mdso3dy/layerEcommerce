@@ -28,4 +28,9 @@ export const APP_ROUTES: Routes = [
     loadComponent: () => import('./book/book.component').then(c => c.BookComponent),
     canActivate: [authGuard, permissionGuard],
   },
+  {
+    path: 'products',
+    canActivate: [authGuard, permissionGuard],
+    loadChildren: () => import('./product/product.routes').then(r => r.routes),
+  },
 ];
