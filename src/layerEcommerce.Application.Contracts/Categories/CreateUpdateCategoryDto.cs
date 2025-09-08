@@ -1,4 +1,5 @@
-﻿using System;
+﻿using layerEcommerce.Enums;
+using System;
 using System.ComponentModel.DataAnnotations;
 
 namespace layerEcommerce.Categories;
@@ -20,4 +21,5 @@ public class CreateUpdateCategoryDto
     [Required]
     [StringLength(512)]
     public string? DescriptionAr { get; set; }
+    public ProductType ProductType { get; set; }
 }
