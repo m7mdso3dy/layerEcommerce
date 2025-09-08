@@ -1,0 +1,139 @@
+<div class="container mt-4">
+  <h3 class="mb-4">{{ productId ? 'Edit Product' : 'Add Product' }}</h3>
+
+  <form [formGroup]="productForm" (ngSubmit)="save()">
+    <div class="row g-3">
+      <!-- SKU -->
+      <div class="col-md-6">
+        <label for="sku" class="form-label">SKU</label>
+        <input id="sku" type="text" class="form-control" formControlName="sku" />
+        <div
+          *ngIf="productForm.get('sku')?.touched && productForm.get('sku')?.invalid"
+          class="text-danger small"
+        >
+          SKU is required
+        </div>
+      </div>
+
+      <!-- Name -->
+      <div class="col-md-6">
+        <label for="name" class="form-label">Name (EN)</label>
+        <input id="name" type="text" class="form-control" formControlName="name" />
+        <div
+          *ngIf="productForm.get('name')?.touched && productForm.get('name')?.invalid"
+          class="text-danger small"
+        >
+          Name is required
+        </div>
+      </div>
+
+      <!-- Name Arabic -->
+      <div class="col-md-6">
+        <label for="nameAr" class="form-label">Name (AR)</label>
+        <input id="nameAr" type="text" class="form-control" formControlName="nameAr" />
+        <div
+          *ngIf="productForm.get('nameAr')?.touched && productForm.get('nameAr')?.invalid"
+          class="text-danger small"
+        >
+          Arabic name is required
+        </div>
+      </div>
+
+      <!-- Category -->
+      <div class="col-md-6">
+        <label for="categoryId" class="form-label">Category</label>
+        <p-select
+          formControlName="categoryId"
+          [options]="categories"
+          optionLabel="name"
+          optionValue="id"
+          placeholder="Select a Category"
+          styleClass="form-control"
+        >
+        </p-select>
+        <div
+          *ngIf="productForm.get('categoryId')?.touched && productForm.get('categoryId')?.invalid"
+          class="text-danger small"
+        >
+          Category is required
+        </div>
+      </div>
+
+      <!-- Price -->
+      <div class="col-md-6">
+        <label for="price" class="form-label">Price</label>
+        <input id="price" type="number" class="form-control" formControlName="price" />
+        <div
+          *ngIf="productForm.get('price')?.touched && productForm.get('price')?.invalid"
+          class="text-danger small"
+        >
+          Price must be a positive number
+        </div>
+      </div>
+
+      <!-- Is Active -->
+      <div class="col-md-6 d-flex align-items-center">
+        <div class="form-check mt-4">
+          <input
+            id="isActive"
+            type="checkbox"
+            class="form-check-input"
+            formControlName="isActive"
+          />
+          <label for="isActive" class="form-check-label">Active</label>
+        </div>
+      </div>
+
+      <!-- Descriptions -->
+      <div class="col-12">
+        <label for="description" class="form-label">Description (EN)</label>
+        <textarea
+          id="description"
+          rows="3"
+          class="form-control"
+          formControlName="description"
+        ></textarea>
+      </div>
+
+      <div class="col-12">
+        <label for="descriptionAr" class="form-label">Description (AR)</label>
+        <textarea
+          id="descriptionAr"
+          rows="3"
+          class="form-control"
+          formControlName="descriptionAr"
+        ></textarea>
+      </div>
+
+      <div class="col-12">
+        <label for="shortDescription" class="form-label">Short Description (EN)</label>
+        <textarea
+          id="shortDescription"
+          rows="2"
+          class="form-control"
+          formControlName="shortDescription"
+        ></textarea>
+      </div>
+
+      <div class="col-12">
+        <label for="shortDescriptionAr" class="form-label">Short Description (AR)</label>
+        <textarea
+          id="shortDescriptionAr"
+          rows="2"
+          class="form-control"
+          formControlName="shortDescriptionAr"
+        ></textarea>
+      </div>
+    </div>
+
+    <!-- Buttons -->
+    <div class="mt-4 d-flex justify-content-end gap-2">
+      <button type="submit" class="btn btn-primary" [disabled]="loading">
+        {{ productId ? 'Update' : 'Save' }}
+      </button>
+      <button type="button" class="btn btn-secondary" (click)="router.navigate(['/products'])">
+        Cancel
+      </button>
+    </div>
+  </form>
+</div>
