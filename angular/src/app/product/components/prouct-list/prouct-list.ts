@@ -53,6 +53,5 @@ export class ProuctList implements OnInit {
         });
       }
     });
-    // TODO: call service delete and refresh list
   }
 }
